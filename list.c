@@ -59,9 +59,7 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
   if (list->tail == NULL) return NULL;
-  
-  Node* aux = list->head;
-  
+    
   list->current = list->tail;
   return list->current->data;
 }
