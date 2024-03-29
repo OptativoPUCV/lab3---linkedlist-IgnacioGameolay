@@ -49,6 +49,10 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
+  if (list->currnet != NULL || list->currnet->next != NULL){
+    list->current = list->current->next;
+    return list->current->data;
+  }
     return NULL;
 }
 

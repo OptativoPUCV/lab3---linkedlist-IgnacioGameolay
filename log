@@ -14,3 +14,18 @@ Thu 28 Mar 2024 11:58:42 PM UTC:
  tests:  2|5
 total_score: 15/70
 51008d2
+Fri 29 Mar 2024 12:00:44 AM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:52:13: error: ‘List’ {aka ‘struct List’} has no member named ‘currnet’; did you mean ‘current’?
+   52 |   if (list->currnet != NULL || list->currnet->next != NULL){
+      |             ^~~~~~~
+      |             current
+list.c:52:38: error: ‘List’ {aka ‘struct List’} has no member named ‘currnet’; did you mean ‘current’?
+   52 |   if (list->currnet != NULL || list->currnet->next != NULL){
+      |                                      ^~~~~~~
+      |                                      current
+Compilation failed
+5c13f02
