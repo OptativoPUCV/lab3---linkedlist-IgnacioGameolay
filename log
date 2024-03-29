@@ -63,3 +63,14 @@ Fri 29 Mar 2024 12:09:12 AM UTC:
  tests:  6|4
 total_score: 25/70
 3a4a3b2
+Fri 29 Mar 2024 12:11:10 AM UTC: 
+ list.c | 8 ++------
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:63:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   63 |   Node* aux = list->head;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+df1d11a
