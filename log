@@ -29,3 +29,14 @@ list.c:52:38: error: ‘List’ {aka ‘struct List’} has no member named ‘c
       |                                      current
 Compilation failed
 5c13f02
+Fri 29 Mar 2024 12:00:52 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:52:38: error: ‘List’ {aka ‘struct List’} has no member named ‘currnet’; did you mean ‘current’?
+   52 |   if (list->current != NULL || list->currnet->next != NULL){
+      |                                      ^~~~~~~
+      |                                      current
+Compilation failed
+f2f8d59
