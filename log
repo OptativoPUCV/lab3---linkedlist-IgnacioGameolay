@@ -239,3 +239,17 @@ list.c:84:23: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 63d5dab
+Sat 30 Mar 2024 03:32:30 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:79:15: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   79 |     list->head,list->tail,list->current = newNode;
+      |               ^
+list.c:79:26: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   79 |     list->head,list->tail,list->current = newNode;
+      |                          ^
+cc1: all warnings being treated as errors
+Compilation failed
+b8e6bfc
