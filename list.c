@@ -93,22 +93,6 @@ void pushBack(List * list, void * data) {
     list->current = list->tail;
   if (list->current == NULL) printf("\npushNULL!!");
     pushCurrent(list,data);
-  //printf("peli añadida");
-  /*
-  Node* newNode = createNode(data);
-  if (newNode == NULL) return;
-
-  if (list->head == NULL){
-      list->head     = newNode;
-      list->tail     = newNode;
-      if (list->current == NULL) {
-          list->current = newNode;
-      }
-  } else {
-      list->tail->next = newNode;
-      newNode->prev = list->tail;
-      list->tail = newNode;
-  }*/
 }
 
 void pushCurrent(List * list, void * data) {
