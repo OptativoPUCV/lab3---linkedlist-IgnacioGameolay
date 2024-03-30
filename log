@@ -253,3 +253,9 @@ list.c:79:26: error: left-hand operand of comma expression has no effect [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 b8e6bfc
+Sat 30 Mar 2024 03:33:11 AM UTC: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+7a79a35
