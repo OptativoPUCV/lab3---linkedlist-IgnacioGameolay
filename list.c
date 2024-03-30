@@ -91,7 +91,7 @@ void pushFront(List * list, void * data) {
 
 void pushBack(List * list, void * data) {
     list->current = list->tail;
-  if (list->current == NULL) printf("\npushNULL!!");
+  //if (list->current == NULL) printf("\npushNULL!!");
     pushCurrent(list,data);
 }
 
@@ -108,7 +108,6 @@ void pushCurrent(List * list, void * data) {
   }else{
     newNode->prev = list->current;
     newNode->next = list->current->next;
-
 
     if (newNode->next != NULL) {
         newNode->next->prev = newNode;
