@@ -109,12 +109,19 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   if (list->current == NULL) return NULL;
   
-  Node* aux = list->current;
-  list->current->prev = aux->next;
-  list->current->next = aux->prev;
-  list->current = aux->next;
+  void*data = current->data;
+  Node* aux = list->head;
   
-  return aux->data;
+  while(aux->next != list->curent){
+    aux = aux->next;
+  }
+  aux->next = list->curent->next;
+  aux->next->prev = aux;
+  
+  list->current = list->current->next;
+  
+  
+  return data;
 }
 
 void cleanList(List * list) {
