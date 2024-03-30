@@ -218,3 +218,24 @@ Sat 30 Mar 2024 03:26:29 AM UTC:
  tests:  11|1
 total_score: 60/70
 107100b
+Sat 30 Mar 2024 03:32:24 AM UTC: 
+ list.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:79:15: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   79 |     list->head,list->tail,list->current = newNode;
+      |               ^
+list.c:79:26: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   79 |     list->head,list->tail,list->current = newNode;
+      |                          ^
+list.c:84:23: error: expected ‘;’ before ‘}’ token
+   84 |   list->head = newNode
+      |                       ^
+      |                       ;
+   85 | 
+   86 | }
+      | ~                      
+cc1: all warnings being treated as errors
+Compilation failed
+63d5dab
