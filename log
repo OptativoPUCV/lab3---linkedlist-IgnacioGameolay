@@ -162,3 +162,15 @@ list.c:118:21: error: ‘List’ {aka ‘struct List’} has no member named ‘
       |                     current
 Compilation failed
 f3bd72b
+Sat 30 Mar 2024 03:04:26 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:112:15: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  112 |   void*data = current->data;
+      |               ^~~~~~~
+      |               popCurrent
+list.c:112:15: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a94d801
