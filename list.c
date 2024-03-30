@@ -72,7 +72,6 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-  return ;
 }
 
 void pushBack(List * list, void * data) {
