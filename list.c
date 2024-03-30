@@ -57,7 +57,10 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-  if (list->tail == NULL) return NULL;
+  if (list->tail == NULL){
+    printf("lastlist not valid");
+    return NULL;
+  } 
     
   list->current = list->tail;
   return list->current->data;
@@ -89,6 +92,7 @@ void pushFront(List * list, void * data) {
 void pushBack(List * list, void * data) {
     list->current = list->tail;
     pushCurrent(list,data);
+  printf("peli añadida");
 }
 
 void pushCurrent(List * list, void * data) {
