@@ -93,7 +93,7 @@ void pushBack(List * list, void * data) {
     list->current = list->tail;
   if (list->current == NULL) printf("\npushNULL!!");
     pushCurrent(list,data);
-  printf("peli añadida");
+  //printf("peli añadida");
   /*
   Node* newNode = createNode(data);
   if (newNode == NULL) return;
@@ -116,17 +116,24 @@ void pushCurrent(List * list, void * data) {
   
   Node* newNode = createNode(data);
   if (newNode == NULL) return;
-  
-  newNode->prev = list->current;
-  newNode->next = list->current->next;
-  
 
-  if (newNode->next != NULL) {
-      newNode->next->prev = newNode;
-  } else {
-      list->tail = newNode;
+  if (list->head == NULL) {
+    list->head = newNode;
+    list->tail = newNode;
+    list->current = newNode;
+  }else{
+    newNode->prev = list->current;
+    newNode->next = list->current->next;
+
+
+    if (newNode->next != NULL) {
+        newNode->next->prev = newNode;
+    } else {
+        list->tail = newNode;
+    }
+    list->current->next = newNode;
   }
-  list->current->next = newNode;
+  
 }
 
 void * popFront(List * list) {
